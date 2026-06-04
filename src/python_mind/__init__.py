@@ -1,4 +1,4 @@
-"""Corrigés et exemples de code du livre « Penser en Python »."""
+"""Corrigés et exemples de code du livre « Concevoir en Python »."""
 
 from __future__ import annotations
 
@@ -9,10 +9,10 @@ __all__ = ["main"]
 
 def main() -> None:
     """Liste les chapitres dont les corrigés sont disponibles dans le dépôt."""
-    pkg = Path(__file__).resolve().parent          # src/think_python
+    pkg = Path(__file__).resolve().parent          # src/python_mind
     repo = pkg.parents[1]                          # racine du dépôt
     chapters = sorted(p.parent for p in pkg.glob("chapter-*/*/solutions.py"))
-    print("Penser en Python — corrigés des exercices\n")
+    print("Concevoir en Python — corrigés des exercices\n")
     if not chapters:
         print("Aucun corrigé trouvé.")
         return

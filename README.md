@@ -1,10 +1,10 @@
-# Penser en Python — corrigés des exercices
+# Concevoir en Python — corrigés des exercices
 
 Code et **corrigés commentés** des exercices du livre
-**« Penser en Python — Des fondations aux architectures avancées »**
+**« Concevoir en Python — Des fondations aux architectures avancées »**
 (Antoine Pagneux).
 
-Le code vit dans le paquet `src/think_python/`, organisé par chapitre selon
+Le code vit dans le paquet `src/python_mind/`, organisé par chapitre selon
 les renvois `chapter-NN/<slug>` du livre. Pour un chapitre donné, le fichier
 `solutions.py` contient les corrigés sous forme de **code exécutable, typé et
 auto-vérifiant**.
@@ -16,20 +16,20 @@ auto-vérifiant**.
 uv sync                     # crée l'environnement + outils de dev (pytest, ruff)
 
 # Lancer un corrigé isolément (il s'auto-vérifie) :
-uv run python src/think_python/chapter-01/modele-mental/solutions.py
+uv run python src/python_mind/chapter-01/modele-mental/solutions.py
 
 # Lancer toute la suite de tests :
 uv run pytest
 
 # Lister les chapitres disponibles :
-uv run think-python
+uv run python-mind
 ```
 
 ## Comment c'est organisé
 
 ```
-src/think_python/
-  __init__.py                              # petit CLI (`uv run think-python`)
+src/python_mind/
+  __init__.py                              # petit CLI (`uv run python-mind`)
   chapter-01/modele-mental/solutions.py
   chapter-02/pied-a-letrier/solutions.py
   ...
@@ -47,7 +47,7 @@ Chaque `solutions.py` :
   `chapitre N — corrigés OK`.
 
 Le fichier `tests/test_solutions.py` découvre tous les
-`src/think_python/chapter-*/*/solutions.py` et **exécute chacun comme un
+`src/python_mind/chapter-*/*/solutions.py` et **exécute chacun comme un
 script complet** (bloc `__main__` inclus, qui appelle `_checks()`) : un
 chapitre est validé s'il se termine sans erreur. Un seul `uv run pytest`
 valide ainsi l'ensemble du dépôt.
@@ -76,7 +76,7 @@ Les chapitres 32 et 33 définissent une application FastAPI :
 
 ```bash
 uv sync --extra web
-cd src/think_python/chapter-32/fastapi-routes
+cd src/python_mind/chapter-32/fastapi-routes
 uv run uvicorn solutions:app --reload   # http://127.0.0.1:8000/docs
 ```
 

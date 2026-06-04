@@ -1,6 +1,6 @@
 """Vérifie que le code de CHAQUE chapitre se lance bien.
 
-Chaque ``src/think_python/chapter-NN/<slug>/solutions.py`` est exécuté comme un
+Chaque ``src/python_mind/chapter-NN/<slug>/solutions.py`` est exécuté comme un
 script à part entière (avec son bloc ``if __name__ == "__main__"``, qui appelle
 ses auto-vérifications ``_checks()``). Un chapitre est validé s'il se termine
 avec un code de retour 0.
@@ -18,7 +18,7 @@ from pathlib import Path
 
 import pytest
 
-CHAPTERS_DIR = Path(__file__).resolve().parent.parent / "src" / "think_python"
+CHAPTERS_DIR = Path(__file__).resolve().parent.parent / "src" / "python_mind"
 SOLUTION_FILES = sorted(CHAPTERS_DIR.glob("chapter-*/*/solutions.py"))
 
 
